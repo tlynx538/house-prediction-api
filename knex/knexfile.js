@@ -7,10 +7,10 @@
     testing: {
       client: 'pg',
       connection: {
-        host: "localhost",
-        database: 'houses',
-        user:     'postgres',
-        password: ''
+        host: process.env.PGHOST,
+        database: process.env.PGDATABASE,
+        user: process.env.PGUSER,
+        password: process.env.PGPASSWORD
       },
       migrations: {
         directory: __dirname + '/knex/migrations',
