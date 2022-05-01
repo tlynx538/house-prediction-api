@@ -50,7 +50,7 @@ const registerUser = async(req,res) => {
 const findBudgetHomes = async(req,res) => {
     if(req.params.token == req.session.token)
     {
-        const result = await findHomesByMinPriceByMaxPrice(req.params.maxPrice,req.params.minPrice);
+        const result = await findHomesByMinPriceByMaxPrice(req.params.minPrice,req.params.maxPrice);
         res.json(result);
     }
     else 
